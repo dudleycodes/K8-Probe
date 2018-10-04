@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: K8Probe
+spec:
+  containers:
+  - name: K8Probe
+    image: nicolaka/netshoot
+    command:
+      - sleep
+      - "3600"
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
